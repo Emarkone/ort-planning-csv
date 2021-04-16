@@ -3,7 +3,6 @@ module.exports = class Event {
         this.name = name;
         let correctDate = date.split('/');
         correctDate[1] -= 1;
-        console.log(correctDate.reverse().concat(timeStart.split(':')));
         this.start = new Date(...correctDate.concat(timeStart.split(':')));
         this.end = new Date(this.start.valueOf());
         this.end.setHours(this.end.getHours() + parseInt(duration.split('H')[0]));
